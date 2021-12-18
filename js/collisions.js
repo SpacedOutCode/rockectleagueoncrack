@@ -55,8 +55,8 @@ function carFrontBallCollision(outputFromFrontFaceToBallCalc) {
 
       var resultAngle = turnAngle + bounceAngle + Math.PI/2;
 
-      ball.velX = -1*velMag * Math.roundTo(100000, Math.cos(resultAngle));
-      ball.velY = -1*velMag * Math.roundTo(100000, Math.sin(resultAngle));
+      ball.velX = 9999;
+      ball.velY = 99999;
 
       ball.x += -2*velMag * Math.roundTo(100000, Math.cos(resultAngle));
       ball.y += -2*velMag * Math.roundTo(100000, Math.sin(resultAngle));
