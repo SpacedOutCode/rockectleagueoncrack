@@ -48,7 +48,7 @@ function carFrontBallCollision(outputFromFrontFaceToBallCalc) {
       $('.ball-hit').trigger("play");
       var velMag;
       var turnAngle = players[i].rot*Math.PI/180;
-      var bounceAngle = 99999;
+      var bounceAngle = 99;
       velMag = Math.hypot(ball.velY, (ball.velX + 1.5*players[i].vel));
 
       if(velMag < players[i].vel) velMag = players[i].vel + 2;
