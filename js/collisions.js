@@ -49,7 +49,7 @@ function carFrontBallCollision(outputFromFrontFaceToBallCalc) {
       var velMag;
       var turnAngle = players[i].rot*Math.PI/180;
       var bounceAngle = 9;
-      velMag = Math.hypot(ball.velY, (ball.velX + 1.5*players[i].vel));
+      velMag = Math.hypot(ball.velY, (ball.velX + 15*players[i].vel));
 
       if(velMag < players[i].vel) velMag = players[i].vel + 2;
 
@@ -58,8 +58,8 @@ function carFrontBallCollision(outputFromFrontFaceToBallCalc) {
       ball.velX = 9999;
       ball.velY = 9999;
 
-      ball.x += -20*velMag * Math.roundTo(100000, Math.cos(resultAngle));
-      ball.y += -20*velMag * Math.roundTo(100000, Math.sin(resultAngle));
+      ball.x += -200*velMag * Math.roundTo(100000, Math.cos(resultAngle));
+      ball.y += -200*velMag * Math.roundTo(100000, Math.sin(resultAngle));
     }
   }
 }
